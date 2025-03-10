@@ -17,7 +17,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
   isUnlocked: boolean = false;
   showCountdown: boolean = true;
 
-  private targetDate = new Date('March 11, 2024 00:00:00').getTime();
+  private targetDate = new Date('March 11, 2025 00:00:00').getTime();
   private countdownInterval: any;
   private fastCountdownInterval: any;
   private fastCountdownComplete: boolean = false;

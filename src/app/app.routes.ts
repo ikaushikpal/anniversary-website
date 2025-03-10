@@ -9,6 +9,7 @@ import { Group5Component } from './memories/group-5/group-5.component';
 import { Group6Component } from './memories/group-6/group-6.component';
 import { Group7Component } from './memories/group-7/group-7.component';
 import { MessagesComponent } from './messages/messages.component';
+import { ThanksgivingComponent } from './thanksgiving/thanksgiving.component';
 // import { GamesComponent } from './games/games.component';
 // import { TicTacToeComponent } from './games/tic-tac-toe/tic-tac-toe.component';
 // import { RockPaperScissorsComponent } from './games/rock-paper-scissors/rock-paper-scissors.component';
@@ -30,6 +31,7 @@ export const routes: Routes = [
     ],
   },
   { path: 'messages', component: MessagesComponent },
+  { path: 'thanksgiving', component: ThanksgivingComponent },
   // {
   //   path: 'games',
   //   children: [
