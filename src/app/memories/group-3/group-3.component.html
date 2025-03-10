@@ -1,0 +1,28 @@
+<div class="group4-container">
+    <!-- Title -->
+    <h1 class="title">{{ title }}</h1>
+  
+    <!-- Content -->
+    <div class="content">
+      <!-- Images -->
+      <div class="images-container">
+        <!-- Use ngFor with index to apply vertical-image class to specific images -->
+        <div *ngFor="let image of images; let i = index" 
+             class="image-container" 
+             [ngClass]="{'vertical-image': i+1 === 7 || i+1 === 9 || i+1 === 10}">
+          <img [src]="image" alt="Group 4 Image" class="image">
+        </div>
+      </div>
+  
+      <!-- Text -->
+      <div class="text-container">
+        <p>{{ text }}</p>
+      </div>
+    </div>
+  
+    <!-- Buttons Container -->
+    <div class="buttons-container">
+      <button class="nav-button back-button" routerLink="/memories/group-2">Back</button>
+      <button class="nav-button next-button" routerLink="/memories/group-4">Next</button>
+    </div>
+  </div>

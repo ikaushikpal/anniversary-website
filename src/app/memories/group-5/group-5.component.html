@@ -1,0 +1,25 @@
+<div class="group6-container">
+    <!-- Title -->
+    <h1 class="title">{{ title }}</h1>
+  
+    <!-- Content -->
+    <div class="content">
+      <!-- Split Focus Image Layout -->
+      <div class="images-container">
+        <div *ngFor="let image of images" class="image-container">
+          <img [src]="image" alt="Gallery Image" class="image">
+        </div>
+      </div>
+  
+      <!-- Text -->
+      <div class="text-container">
+        <p>{{ text }}</p>
+      </div>
+    </div>
+  
+    <!-- Buttons Container -->
+    <div class="buttons-container">
+      <button class="nav-button back-button" routerLink="/memories/group-4">Back</button>
+      <button class="nav-button next-button" routerLink="/memories/group-6">Next</button>
+    </div>
+  </div>

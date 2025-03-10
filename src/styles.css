@@ -1,0 +1,15 @@
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the body takes full height and removes any default spacing */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,34 @@
+<div class="countdown-container">
+    <h1 *ngIf="!isUnlocked">Countdown to Our Anniversary</h1>
+    <h1 *ngIf="isUnlocked">Happy Anniversary!</h1>
+  
+    <div *ngIf="!isUnlocked" class="countdown-cards">
+      <div class="countdown-card">
+        <div class="countdown-value">
+          <span>{{ days }}</span>
+        </div>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-card">
+        <div class="countdown-value">
+          <span>{{ hours }}</span>
+        </div>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-card">
+        <div class="countdown-value">
+          <span>{{ minutes }}</span>
+        </div>
+        <span class="countdown-label">Minutes</span>
+      </div>
+      <div class="countdown-card">
+        <div class="countdown-value">
+          <span>{{ seconds }}</span>
+        </div>
+        <span class="countdown-label">Seconds</span>
+      </div>
+    </div>
+  
+    <p *ngIf="isUnlocked">Our journey together begins now...</p>
+    <button *ngIf="isUnlocked" routerLink="/memories/group-0">Next</button>
+  </div>

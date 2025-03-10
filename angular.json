@@ -77,6 +77,13 @@
           },
           "defaultConfiguration": "development"
         },
+        "prerender": {
+          "builder": "@angular-devkit/build-angular:prerender",
+          "options": {
+            "browserTarget": "anniversary-website:build:production",
+            "serverTarget": "anniversary-website:server:production"
+          }
+        },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n"
         },

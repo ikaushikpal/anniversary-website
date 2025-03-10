@@ -1,0 +1,124 @@
+.countdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff6f61, #ffcccb);
+    color: #2c3e50;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+  
+    .countdown-cards {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  
+    .countdown-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      min-width: 120px;
+      opacity: 0;
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+  
+    .countdown-value {
+      font-size: 2.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ff6f61;
+      position: relative;
+      overflow: hidden;
+      height: 40px; // Fixed height for the rolling effect
+      margin-bottom: 10px;
+    }
+  
+    .countdown-value span {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      animation: roll 0.5s ease-in-out; // Rolling animation
+      top: 0;
+      left: 0;
+    }
+  
+    .countdown-label {
+      font-size: 1rem;
+      color: #2c3e50;
+      // padding-top: 200px;
+    }
+  
+    p {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+  
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      color: #ff6f61;
+  
+      &:hover {
+        background: #ffcccb;
+      }
+    }
+  }
+  
+  /* Define the fadeIn animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Define the roll animation */
+  @keyframes roll {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Add a delay to each card for a staggered effect */
+  .countdown-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .countdown-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .countdown-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .countdown-card:nth-child(4) {
+    animation-delay: 0.4s;
+  }

@@ -1,0 +1,40 @@
+<div class="gallery-container">
+    <!-- Title -->
+    <h1 class="title">{{ title }}</h1>
+  
+    <!-- Content -->
+    <div class="content">
+      <!-- Photo Grid -->
+      <div class="photo-grid">
+        <!-- Horizontal Images -->
+        <div class="image-container horizontal h1">
+          <img src="{{ images[0] }}" alt="Horizontal Image 1" class="image">
+        </div>
+        <div class="image-container horizontal h2">
+          <img src="{{ images[1] }}" alt="Horizontal Image 2" class="image">
+        </div>
+        
+        <!-- Vertical Images -->
+        <div class="image-container vertical v1">
+          <img src="{{ images[2] }}" alt="Vertical Image 1" class="image">
+        </div>
+        <div class="image-container vertical v2">
+          <img src="{{ images[3] }}" alt="Vertical Image 2" class="image">
+        </div>
+        <div class="image-container vertical v3">
+          <img src="{{ images[4] }}" alt="Vertical Image 3" class="image">
+        </div>
+      </div>
+  
+      <!-- Text -->
+      <div class="text-container">
+        <p>{{ text }}</p>
+      </div>
+    </div>
+  
+    <!-- Navigation Buttons -->
+    <div class="buttons-container">
+      <button class="nav-button back-button" routerLink="/memories/group-6">Back</button>
+      <button class="nav-button next-button" routerLink="/messages">Next</button>
+    </div>
+  </div>

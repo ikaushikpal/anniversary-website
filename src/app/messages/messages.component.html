@@ -1,0 +1,40 @@
+<div class="chat-header">
+    <h2>Our Anniversary Memories</h2>
+  </div>
+  
+  <div class="chat-container">
+    <div 
+      *ngFor="let message of messages" 
+      class="message" 
+      [ngClass]="{'message-me': message.sender === 'me', 'message-her': message.sender === 'her'}"
+    >
+      {{ message.text }}
+      <div class="timestamp">
+        {{ message.timestamp | date:'shortTime' }}
+      </div>
+    </div>
+  </div>
+  
+  <div class="chat-footer">
+    <input 
+      type="text" 
+      [(ngModel)]="newMessage" 
+      class="input-box" 
+      placeholder="Type a message..." 
+      [disabled]="isTyping"
+    />
+    <button class="send-btn" (click)="sendMessage()">
+        <img src="sent.png" alt="Send" class="send-icon">
+    </button>
+    
+  </div>
+  
+  <div class="navigation">
+    <a [routerLink]="['/memories/group-7']" class="nav-button">
+      Previous
+    </a>
+    <!-- <div>{{ currentPage }} / {{ totalPages }}</div> -->
+    <a [routerLink]="['/games']" class="nav-button">
+      Next
+    </a>
+  </div>
