@@ -39,7 +39,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId) && !this.isUnlocked) {
       this.startCountdown();
     }
   }
